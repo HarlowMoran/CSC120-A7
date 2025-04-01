@@ -16,6 +16,12 @@ public class Cafe extends Building{
         System.out.println("You have built a cafe: ☕");
     }
 
+    /**
+     * decreases inventory after a coffee is sold
+     * @param size
+     * @param nSugarPackets
+     * @param nCreams
+     */
     public void sellCoffee(int size, int nSugarPackets, int nCreams){
         nCoffeeOunces -= size;
         nSugarPackets -= nSugarPackets;
@@ -23,6 +29,13 @@ public class Cafe extends Building{
         nCups -= 1;
     }
 
+    /**
+     * increases inventory after a restock
+     * @param nCoffeeOunces
+     * @param nSugarPackets
+     * @param nCreams
+     * @param nCups
+     */
     private void restock(int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups){
         nCoffeeOunces += nCoffeeOunces;
         nSugarPackets += nSugarPackets;

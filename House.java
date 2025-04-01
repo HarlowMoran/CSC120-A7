@@ -15,16 +15,26 @@ private boolean hasDiningRoom;
     
     System.out.println("You have built a house: 🏠");
   }
-
+  /**
+   * Checks for a dining room
+   * @return hasDiningRoom
+   */
   public boolean getDiningRoom(){
     return hasDiningRoom;
   } 
-
+  /**
+   * Checks for number of residents in the house
+   * @return nResidents
+   */
   public int nResidents(){
     int nResidents = residents.size();
     return nResidents;
   }
-
+  /**
+   * Checks if a student is a resident
+   * @param s
+   * @return true | false
+   */
   public boolean isResident(Student s){
     if(residents.contains(s)){
       return true;
@@ -34,6 +44,9 @@ private boolean hasDiningRoom;
     }
   }
   
+  /**
+   * Adds a student to the list of residents if they are not already a resident
+   */
   private void moveIn(Student s) {
     if(isResident(s) == true){
         System.out.println(s + " already lives in this house.");
@@ -43,8 +56,12 @@ private boolean hasDiningRoom;
     }
   }
 
-
-public Student moveOut(Student s) {
+  /**
+   * Removes a student from the list of residents if they were on the list
+   * @param s
+   * @return s
+   */
+  public Student moveOut(Student s) {
     if(isResident(s) == true){
         residents.remove(s);
         return s;
