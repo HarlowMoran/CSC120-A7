@@ -7,6 +7,36 @@ public class Cafe extends Building{
     private int nCreams; // The number of "splashes" of cream remaining in inventory
     private int nCups; // The number of cups remaining in inventory
 
+    /**
+     * defualt constructor... builds a cafe
+     */
+    public Cafe() {
+        this("<Name Unknown>", "<Address Unknown>", 1, 0, 0, 0, 0);
+    }
+
+    /* Overloaded constructor with address only */
+    public Cafe(String address) {
+        this(); // Call default constructor
+        this.address = address; // Override address
+    }
+
+    /* Overloaded constructor with name, address */
+    public Cafe(String name, String address) {
+        this(); // Call default constructor
+        this.address = address; // Override address
+        this.name = name; // Override name
+    }
+
+    /* Overloaded constructor with name, address and nFloors*/
+    public Cafe(String name, String address, int nFloors) {
+        if (name != null) { this.name = name; }
+        if (address != null) { this.address = address; } 
+        if (nFloors < 1) {
+            throw new RuntimeException("Cannot construct a building with fewer than 1 floor.");
+        }
+        this.nFloors = nFloors;
+    }
+    /* Full contructor */
     public Cafe(String name, String address, int nFloors, int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups) {
         super(name, address, nFloors);
         this.nCoffeeOunces = nCoffeeOunces;
@@ -17,7 +47,26 @@ public class Cafe extends Building{
     }
 
     /**
+     * defualt method
      * decreases inventory after a coffee is sold
+     * @param size
+     */
+    public void sellCoffee(int size){
+        nCoffeeOunces -= size;
+        nCups -= 1;
+    }
+    /**
+     * Overloaded method with order requesting cream
+     * @param size
+     * @param nCreams
+     */
+    public void sellCoffee(int size, int nCreams){
+        nCoffeeOunces -= size;
+        this.nCreams -= nCreams; 
+        nCups -= 1;
+    }
+    /**
+     * Overloaded method with order requesting cream and sugar
      * @param size
      * @param nSugarPackets
      * @param nCreams
@@ -41,7 +90,22 @@ public class Cafe extends Building{
         nSugarPackets += nSugarPackets;
         nCreams += nCreams;
         nCups += nCups;
+    }
 
+    /**
+     * Overrides showOptions method to show all options within the house class
+     */
+    @Override
+    public void showOptions() {
+        System.out.println("Available options at " + this.name + ":\n + enter() \n + exit() \n + goUp() \n + goDown() \n + goToFloor(n) :\n + sellCoffee(size, nSugarPackets, nCreams) \n + restock(nCoffeeOunces, nSugarPackets, nCreams, nCups)");
+    }
+    
+    /**
+     * Overrides goToFloor to prohibit people from going to different floors in the cafe class
+     */
+    @Override
+    public void goToFloor(int floorNum) {
+        System.out.println("Movements to other floors is not allowed within the cafe.");
     }
     
 //    public static void main(String[] args) {

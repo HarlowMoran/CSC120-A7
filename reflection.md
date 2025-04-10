@@ -1,8 +1,12 @@
 Use this file to record your reflection on this assignment.
 
-- What are your initial impressions of how `Inheritance` affects your programming?
+- Which methods did you decide to `overload`, and why?
+
+In the cafe class I overloaded the constructor and the sellCoffee method. The contructor I overloaded because not every cafe is guarenteed to have the same attributes as another when they are created. Additionally, I overloaded the sellCoffee method because not everyone wants sugar and cream in their coffe, so this makes the coffee more customizable.
+
+In the house class I overloaded the constructor and the hasDiningHall method. The constructor I overloaded because not every house has the same attributes as another when they are created. Additionally, I overloaded the hasDiningHall method because some houses may have more than one dining hall.
+
+In the library class I overloaded the constructor and the containsTitle method. The constructor I overloaded because not every library has the same attributes as another when they are created. Additionally, I overloaded the containsTitle method to allow to search the collection for not only a specific title, but also a specific author.
+
 - What worked, what didn't, what advice would you give someone taking this course in the future?
-
-This assignment actually went a lot better than I was expecting it to! The idea of inheritance makes a lot of sense, and I felt it was really easy to implement in this assignment!
-
-I also noticed that I followed the README as closely as a possibly could, which is something I struggled with a bit in the first half of the semester. In general, I think this assignment went a lot better because of this.
+I felt like it was really easy to override methods, but harder to overload them. Additionally, because the instructions to override methods were very direct, it felt easier. However I struggled more with the creative side of the overloading.

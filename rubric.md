@@ -10,52 +10,52 @@ Listed below are various aspects of the assignment.  When you turn in your work,
 
 ## Assignment Points:
 
-___**YES**__ 1 pt: The `House`, `Library`, and `Cafe` classes all `extend` the `Building` class.
+___**YES**__ 1 pt: The `House`, `Library`, and `Cafe` classes all `extend` the modified `Building` class.
 
-### Level 1: `House.java` (3 pts)
+### Level 1: Method `Overrides` (4 pts)
 
-__**YES**___ 1 pt: The `House` class includes the requested attributes
+___**YES**__ 1 pt: The `House`, `Library`, and `Cafe` classes all override the `showOptions()` method to include their additional interactive methods
 
-__**YES**___ 1 pt: The `House` class implements the requested accessors
+___**YES**__ 1 pt: The `Library` class has a `goToFloor(...)` method that allows movement between non-adjacent floors
 
-___**YES**__ 1 pt: The `House` class implements the requested additional methods (`moveIn(...)`, `moveOut(...)`, and `isResident(...)`)
+__**YES**___ 1 pt: The `House` class has a `goToFloor(...)` method that allows movement between non-adjacent floors only if an elevator is present
 
-### Level 2: `Library.java` (3 pts)
+__**YES**___ 1 pt: The `Cafe` class has a `goToFloor(...)` method that doesn't permit movement off the first floor (we assume that any additional floors are for storage / accessible only to employees)
 
-___**YES**__ 1 pt: The `Library` class includes the requested attributes
+### Level 2: Method `Overloads` (3 pts)
 
-___**YES**__ 1 pt: The `Library` class implements the requested methods to add / remove or check out / return titles
+__**YES**___ 1 pt: The `House` class includes at least 2 overloaded methods
 
-___**PART**__ 1 pt: The `Library` class implements the requested additional methods (`containsTitle(...)`, `isAvailable(...)`, and `printCollection()`)
+___**YES**__ 1 pt: The `Library` class includes at least 2 overloaded methods
 
-### Level 3: `Cafe.java` (3 pts)
+__**YES**___ 1 pt: The `Cafe` class includes at least 2 overloaded methods
 
-___**YES**__ 1 pt: The `Cafe` class includes the requested attributes
+### Level 3: `CampusMap.java` (2 pts)
 
-__**YES**___ 1 pt: The `Cafe` class keeps the inventory up to date, based on sales
+__**YES**___ 1 pt: The `main(...)` method in `CampusMap.java` has been modified to include at least 10 `Building`s (or `Building` subclasses)
 
-___**YES**__ 1 pt: The `Cafe` class uses the `restock(...)` method to avoid running out of inventory.
+__**YES**___ 1 pt: The `CampusMap` includes at least one instance of each class: a `House`, a `Library`, a `Cafe`, and a `Building` (demonstrating that each constructor works as expected)
 
 
 
 ## General Items:
 
-___**PART**__ 4 pts: Programs compile without errors or warnings
+__**YES**___ 4 pts: Programs compile without errors or warnings
 
-__**YES**___ 2 pts: Executes fully & consistently without crashing (exception/freeze)
+___**YES**__ 2 pts: Executes fully & consistently without crashing (exception/freeze)
 
-___**YES**__ 2 pt: Complies with style guidelines (missing items 1 pt each):
+__**YES**___ 2 pt: Complies with style guidelines (missing items 1 pt each):
 
-      ___**YES**__ Classes & class members all have Javadoc header comments
+      __**YES**___ Classes & class members all have Javadoc header comments
 
-      ___**YES**__ Clear and consistent indentation of bracketed sections
+      __**YES**___ Clear and consistent indentation of bracketed sections
 
-      ___**YES**__ Adheres to Java conventions on naming & capitalization
+      __**YES**___ Adheres to Java conventions on naming & capitalization
 
       ___**YES**__ Methods & variables all have clear and accurate names
 
       ___**YES**__ Methods avoid confusing side effects
 
-___**YES**__ 1 pt: All required files included with submission (including completed `rubric.md` file)
+__**YES**___ 1 pt: All required files included with submission (including completed `rubric.md` file)
 
 ___**YES**__ 1 pt: `reflection.md` contains your reflection on the assignment
