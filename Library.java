@@ -140,7 +140,8 @@ public class Library extends Building{
      */
     @Override
     public void showOptions() {
-        System.out.println("Available options at " + this.name + " :\n + enter() \n + exit() \n + goUp() \n + goDown() \n + goToFloor(n):\n + addTitle(title) \n + removeTitle(title) \n + checkOut(title) \n + returnBook(title) \n + containsTitle(title) \n + isAvailable(title) \n + printCollection()");
+      super.showOptions();
+        System.out.println("addTitle(title) \n + removeTitle(title) \n + checkOut(title) \n + returnBook(title) \n + containsTitle(title) \n + isAvailable(title) \n + printCollection()");
     }
 
     /**

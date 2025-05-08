@@ -137,7 +137,8 @@ public House(String name, String address, int nFloors, boolean hasDiningRoom, Ar
  */
 @Override
 public void showOptions() {
-  System.out.println("Available options at " + this.name + ":\n + enter() \n + exit() \n + goUp() \n + goDown() \n + goToFloor(n) \n + getDiningRoom() \n + nResidents() \n + isResident(s) \n + moveIn(s) \n + moveOut(s)");
+  super.showOptions();
+  System.out.println("getDiningRoom() \n + nResidents() \n + isResident(s) \n + moveIn(s) \n + moveOut(s)");
 }
 
 /**

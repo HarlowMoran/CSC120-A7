@@ -119,7 +119,8 @@ public class Cafe extends Building{
      */
     @Override
     public void showOptions() {
-        System.out.println("Available options at " + this.name + ":\n + enter() \n + exit() \n + goUp() \n + goDown() \n + goToFloor(n) :\n + sellCoffee(size, nSugarPackets, nCreams) \n + restock(nCoffeeOunces, nSugarPackets, nCreams, nCups)");
+        super.showOptions();
+        System.out.println(" + sellCoffee(size, nSugarPackets, nCreams) \n + restock(nCoffeeOunces, nSugarPackets, nCreams, nCups)");
     }
     
     /**
@@ -127,11 +128,12 @@ public class Cafe extends Building{
      */
     @Override
     public void goToFloor(int floorNum) {
-        System.out.println("Movements to other floors is not allowed within the cafe.");
+        throw new RuntimeException("You must remain on the first floor of the cafe. Other floors are not available to customers.");
     }
     
-//    public static void main(String[] args) {
-//        new Cafe();
-//    }
+    public static void main(String[] args) {
+        Cafe myCafe = new Cafe("608");
+        myCafe.showOptions();
+    }
     
 }

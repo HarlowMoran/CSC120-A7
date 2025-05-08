@@ -50,6 +50,7 @@ public class CampusMap {
      */
     public static void main(String[] args) {
         CampusMap myMap = new CampusMap();
+        myMap.addBuilding(new Cafe("Compass Cafe", "7 Neilson Drive Northampton, MA 01063", 1, 50, 50, 50, 50));
         myMap.addBuilding(new Building("Ford Hall", "100 Green Street Northampton, MA 01063", 4));
         myMap.addBuilding(new Building("Bass Hall", "4 Tyler Court Northampton, MA 01063", 4));
         myMap.addBuilding(new Library("Campus Bookstore", "8 Green Street Northampton, MA 01063", 1, new Hashtable<String, Boolean>(), false));
