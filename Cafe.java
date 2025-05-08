@@ -14,20 +14,32 @@ public class Cafe extends Building{
         this("<Name Unknown>", "<Address Unknown>", 1, 0, 0, 0, 0);
     }
 
-    /* Overloaded constructor with address only */
+    /**
+     * Overloaded constructor with address only
+     * @param address
+     */
     public Cafe(String address) {
         this(); // Call default constructor
         this.address = address; // Override address
     }
 
-    /* Overloaded constructor with name, address */
+    /**
+     * Overloaded constructor with name, address
+     * @param name
+     * @param address
+     */
     public Cafe(String name, String address) {
         this(); // Call default constructor
         this.address = address; // Override address
         this.name = name; // Override name
     }
 
-    /* Overloaded constructor with name, address and nFloors*/
+    /**
+     * Overloaded constructor with name, address and nFloors
+     * @param name
+     * @param address
+     * @param nFloors
+     */
     public Cafe(String name, String address, int nFloors) {
         if (name != null) { this.name = name; }
         if (address != null) { this.address = address; } 
@@ -36,7 +48,17 @@ public class Cafe extends Building{
         }
         this.nFloors = nFloors;
     }
-    /* Full contructor */
+    
+    /**
+     * Full constructor
+     * @param name
+     * @param address
+     * @param nFloors
+     * @param nCoffeeOunces
+     * @param nSugarPackets
+     * @param nCreams
+     * @param nCups
+     */
     public Cafe(String name, String address, int nFloors, int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups) {
         super(name, address, nFloors);
         this.nCoffeeOunces = nCoffeeOunces;

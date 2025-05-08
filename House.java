@@ -9,25 +9,42 @@ private ArrayList<Student> residents;
 private boolean hasDiningRoom;
 private boolean hasElevator;
 
-/*Default constructor...builds a house */
+/**
+ * Default constructor...builds a house 
+ */
 public House() {
   this("<Name Unknown>", "<Address Unknown>", 1, false, new ArrayList<Student>(), false);
 }
 
-/* Overloaded constructor with address only */
+/**
+ * Overloaded constructor with address only
+ * @param address
+ */
 public House(String address) {
   this(); // Call default constructor
   this.address = address; // Override address
 }
 
-/* Overloaded constructor with name, address */
+/**
+ * Overloaded constructor with name, address
+ * @param name
+ * @param address
+ */
 public House(String name, String address) {
   this(); // Call default constructor
   this.address = address; // Override address
   this.name = name; //Override name
 }
 
-/* Full constructor */
+/**
+ * Full constructor
+ * @param name
+ * @param address
+ * @param nFloors
+ * @param hasDiningRoom
+ * @param residents
+ * @param hasElevator
+ */
 public House(String name, String address, int nFloors, boolean hasDiningRoom, ArrayList<Student>residents, boolean hasElevator){
     super(name, address, nFloors);
     this.hasDiningRoom = hasDiningRoom;

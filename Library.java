@@ -14,20 +14,34 @@ public class Library extends Building{
     this("<Name Unknown>", "<Address Unknown>", 1, new Hashtable<String, Boolean>(), false);
   }
 
-  /* Overloaded constructor with address only */
+  /**
+   * Overloaded constructor with address only
+   * @param address
+   */
   public Library(String address) {
     this(); // Call default constructor
     this.address = address; // Override address
   }
 
-  /* Overloaded constructor with name, address */
+  /**
+   * Overloaded constructor with name, address
+   * @param name
+   * @param address
+   */
   public Library(String name, String address) {
     this(); // Call default constructor
     this.address = address; // Override address
     this.name = name; //Override name
   }
 
-  /* Full constructor */
+  /**
+   * Full constructor
+   * @param name
+   * @param address
+   * @param nFloors
+   * @param collection
+   * @param hasElevator
+   */
   public Library(String name, String address, int nFloors, Hashtable<String, Boolean>collection, boolean hasElevator) {
       super(name, address, nFloors);
       this.collection = new Hashtable<String, Boolean>(collection);
